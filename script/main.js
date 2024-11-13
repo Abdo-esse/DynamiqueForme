@@ -14,7 +14,9 @@ let workExperience = document.querySelector('#workExperience')
 let adWorkExperience = document.querySelector('#ad-work-experience')
 
 //parent of input of work experience
-let parentInputExperience = document.querySelector('#all')
+let parentInputExperience = document.querySelector('.all')
+console.log(parentInputExperience);
+
 
  //function de add person nam
  function addPerson() {
@@ -24,11 +26,15 @@ let parentInputExperience = document.querySelector('#all')
 
  // Function de add work Experience
  function addExperionce() {
+   console.log('addd');
+   
    let newExep = workExperience.cloneNode(true)
    parentInputExperience.appendChild(newExep)
 }
 
-
+function showModel() {
+   
+}
 
  // Declaration du fonction addPerson
  addPersoneBtn.addEventListener('click',addPerson)
