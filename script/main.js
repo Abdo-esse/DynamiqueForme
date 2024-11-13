@@ -4,7 +4,12 @@ let inputPersone = document.querySelector('#inputUser')
 // add persone button 
  let addPersoneBtn = document.querySelector('#addpersone')
 
- console.log(inputPersone);
- console.log(addPersoneBtn);
- 
- 
+// parent of inputPerson
+let parentInputPerson = document.querySelector('.input-name')
+
+ //function de add person nam
+ function addPerson() {
+    let newPerson = inputPersone.cloneNode(true)
+    parentInputPerson.appendChild(newPerson)
+ }
+ addPersoneBtn.addEventListener('click',addPerson)
