@@ -15,30 +15,45 @@ let adWorkExperience = document.querySelector('#ad-work-experience')
 
 //parent of input of work experience
 let parentInputExperience = document.querySelector('.all')
-console.log(parentInputExperience);
+
+// SaveData button
+let SaveData = document.querySelector("#saveData")
+
+//Data arry
+let data = []
+
+//Arry input Persone nam
+
+
+
+
 
 
  //function de add person nam
  function addPerson() {
+   let namePersones =Array.from(document.querySelectorAll('.namePerson'))
     let newPerson = inputPersone.cloneNode(true)
-    newPerson.id=''
-    parentInputPerson.appendChild(newPerson)
-    console.log(newPerson);
     
-
+    parentInputPerson.appendChild(newPerson)
+    newPerson.id =''
+    newPerson.value =''
+    
+    let datanemPerson = namePersones.map(x=>x.value)
+    
+   
+   
  }
 
  // Function de add work Experience
  function addExperionce() {
-   console.log('addd');
-   
    let newExep = workExperience.cloneNode(true)
    parentInputExperience.appendChild(newExep)
+   newExep.id=''
 }
 
 // Function de Aficher 
 function showModel() {
-   
+ 
 }
 
  // Declaration du fonction addPerson
@@ -46,4 +61,5 @@ function showModel() {
 
  // Declaration du fonction add work Experience
  adWorkExperience.addEventListener('click',addExperionce)
+
 
