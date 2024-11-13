@@ -21,7 +21,11 @@ console.log(parentInputExperience);
  //function de add person nam
  function addPerson() {
     let newPerson = inputPersone.cloneNode(true)
+    newPerson.id=''
     parentInputPerson.appendChild(newPerson)
+    console.log(newPerson);
+    
+
  }
 
  // Function de add work Experience
@@ -32,6 +36,7 @@ console.log(parentInputExperience);
    parentInputExperience.appendChild(newExep)
 }
 
+// Function de Aficher 
 function showModel() {
    
 }
