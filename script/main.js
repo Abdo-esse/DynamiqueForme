@@ -76,12 +76,12 @@ console.log(workExperienceForm);
 let parentWorkExperience = document.querySelector('.parent-input')
 console.log(parentWorkExperience);
 
-// 1re tableus des inputs de job-titel
 
 
 
 
-// 2eme  tableus des inputs de company
+
+
 
 
 
@@ -139,18 +139,21 @@ function addWorkExperience() {
 
 
 function sevedata(){
+  // 1re tableus des inputs de job-titel
   let inputsJobTitel = Array.from(document.querySelectorAll('.job-title'))
 const ro = inputsJobTitel.map(x=>x.value)
  console.log(ro);
+ // 2eme  tableus des inputs de company
  let inputsCompany = Array.from(document.querySelectorAll('.company'))
  const rot = inputsCompany.map(x=>x.value)
  console.log(rot);
-  let ob ={}
+  let experience ={}
   for (let i = 0; i < inputsJobTitel.length; i++) {
     data.push(
-      ob={
-        name :inputsJobTitel[i].value,
-        age :inputsCompany[i].value
+      experience={
+        title:inputsJobTitel[i].value,
+        company :inputsCompany[i].value,
+        years:
 
     })
     
