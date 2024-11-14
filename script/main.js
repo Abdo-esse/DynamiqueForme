@@ -76,36 +76,55 @@ console.log(workExperienceForm);
 let parentWorkExperience = document.querySelector('.parent-input')
 console.log(parentWorkExperience);
 
-// 1re input de job-titel
+// 1re tableus des inputs de job-titel
 let inputsJobTitel = Array.from(document.querySelectorAll('.job-title'))
+console.log(inputsJobTitel);
 
 
-// 2eme input  de company
+// 2eme  tableus des inputs de company
 let inputsCompany = Array.from(document.querySelectorAll('.company'))
-console.log(inputsCompany);
 
 
-// 3eme input de job-titel
-let inputsYearsExperience = document.querySelector('.years-of-experience')
-console.log(inputsYearsExperience);
 
-// Dernier input du description
-let inputDescription = document.querySelector('.description')
-console.log(inputDescription);
+// 3eme tableus des inputs de  years job
+let inputsYearsExperience = Array.from(document.querySelectorAll('.years-of-experience'))
+
+
+// Dernier  tableus des inputs du description
+let inputsDescription = Array.from(document.querySelectorAll('.description'))
+
 
 //button de add work experience
 let addWorkExperienceBtn = document.querySelector('#add-work-experience')
    
+//data du formulaire
+let data = []
 
 // La function de  add Work Experience
 function addWorkExperience() {
 
   let newForme= parentWorkExperience.cloneNode(true)
+
   workExperienceForm.appendChild(newForme)
+
   inputsJobTitel.push(document.querySelector('.job-title'))
-  console.log(inputsJobTitel);
+  
   inputsCompany.push(document.querySelector('.company'))
-  console.log(inputsCompany);
+
+  inputsYearsExperience.push(document.querySelector('.years-of-experience'))
+
+  inputsDescription.push(document.querySelector('.description'))
+
+
+  data.push(inputsJobTitel , inputsCompany , inputsCompany , inputsYearsExperience , inputsDescription)
+  data.flat(5)
+  // console.log(data.flat(5));
+  console.log(data);
+  
+  const map1 = data.map((x) => x.value);
+  console.log(map1);
+  
+  
 }
 
 
