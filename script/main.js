@@ -70,12 +70,23 @@
 // Parent des inputs
 let workExperienceForm = document.querySelector('#work-experience-form')
 
-// first input de job-titel
+// 1re input de job-titel
 let inputsJobTitel = document.querySelector('.job-title')
+console.log(inputsJobTitel);
+
+// 2eme input  de company
+let inputCompany = document.querySelector('.company')
+console.log(inputCompany);
 
 
-// secende input de job-titel
+// 3eme input de job-titel
 let inputsYearsExperience = document.querySelector('.years-of-experience')
+console.log(inputsYearsExperience);
 
+// Dernier input du description
+let inputDescription = document.querySelector('.description')
+console.log(inputDescription);
 
-
+//button de add work experience
+let addWorkExperience = document.querySelector('#add-work-experience')
+console.log(addWorkExperience);
