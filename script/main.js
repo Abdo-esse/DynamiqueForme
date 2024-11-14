@@ -100,35 +100,63 @@ let addWorkExperienceBtn = document.querySelector('#add-work-experience')
 //data du formulaire
 let data = []
 
-// La function de  add Work Experience
+// La function de  add Work Experience .rest()
 function addWorkExperience() {
 
   let newForme= parentWorkExperience.cloneNode(true)
-
-  workExperienceForm.appendChild(newForme)
-
-  inputsJobTitel.push(document.querySelector('.job-title'))
+ let dataform = newForme.querySelectorAll("input")
+  console.log(dataform);
   
-  inputsCompany.push(document.querySelector('.company'))
-
-  inputsYearsExperience.push(document.querySelector('.years-of-experience'))
-
-  inputsDescription.push(document.querySelector('.description'))
-
-
-  data.push(inputsJobTitel , inputsCompany , inputsCompany , inputsYearsExperience , inputsDescription)
-  data.flat(5)
-  // console.log(data.flat(5));
-  console.log(data);
-  
-  const map1 = data.map((x) => x.value);
-  console.log(map1);
-  
-  
+  dataform.forEach(e => {
+  e.value =""
+ });
 }
+//   console.log(dataform);
+  
+
+//   workExperienceForm.appendChild(newForme)
+  
+//   inputsJobTitel.push(document.querySelector('.job-title'))
+  
+//   inputsCompany.push(document.querySelector('.company'))
+
+//   inputsYearsExperience.push(document.querySelector('.years-of-experience'))
+
+//   inputsDescription.push(document.querySelector('.description'))
 
 
+//   data.push(inputsJobTitel , inputsCompany , inputsCompany , inputsYearsExperience , inputsDescription)
+  
+//   // console.log(data.flat(5));
+ 
+  
+//   const map1 = data.flat(5).map((x) => x.value);
+//   console.log(map1);
+  
+  
+// }
 
+
+function sevedata() {
+  workExperienceForm.appendChild(newForme)
+  
+//   inputsJobTitel.push(document.querySelector('.job-title'))
+  
+//   inputsCompany.push(document.querySelector('.company'))
+
+//   inputsYearsExperience.push(document.querySelector('.years-of-experience'))
+
+//   inputsDescription.push(document.querySelector('.description'))
+
+
+//   data.push(inputsJobTitel , inputsCompany , inputsCompany , inputsYearsExperience , inputsDescription)
+  
+//   // console.log(data.flat(5));
+ 
+  
+//   const map1 = data.flat(5).map((x) => x.value);
+//   console.log(map1);
+}
 
 
 
