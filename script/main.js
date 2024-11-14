@@ -67,3 +67,15 @@
 //  adWorkExperience.addEventListener('click',addExperionce)
 
 
+// Parent des inputs
+let workExperienceForm = document.querySelector('#work-experience-form')
+
+// first input de job-titel
+let inputsJobTitel = document.querySelector('.job-title')
+
+
+// secende input de job-titel
+let inputsYearsExperience = document.querySelector('.years-of-experience')
+
+
+
