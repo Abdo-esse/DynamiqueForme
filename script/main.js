@@ -77,12 +77,12 @@ let parentWorkExperience = document.querySelector('.parent-input')
 console.log(parentWorkExperience);
 
 // 1re tableus des inputs de job-titel
-let inputsJobTitel = Array.from(document.querySelectorAll('.job-title'))
-console.log(inputsJobTitel);
+
+
 
 
 // 2eme  tableus des inputs de company
-let inputsCompany = Array.from(document.querySelectorAll('.company'))
+
 
 
 
@@ -110,52 +110,53 @@ function addWorkExperience() {
   dataform.forEach(e => {
   e.value =""
  });
-}
-//   console.log(dataform);
+  console.log(dataform);
   
 
-//   workExperienceForm.appendChild(newForme)
-  
-//   inputsJobTitel.push(document.querySelector('.job-title'))
-  
-//   inputsCompany.push(document.querySelector('.company'))
-
-//   inputsYearsExperience.push(document.querySelector('.years-of-experience'))
-
-//   inputsDescription.push(document.querySelector('.description'))
-
-
-//   data.push(inputsJobTitel , inputsCompany , inputsCompany , inputsYearsExperience , inputsDescription)
-  
-//   // console.log(data.flat(5));
- 
-  
-//   const map1 = data.flat(5).map((x) => x.value);
-//   console.log(map1);
-  
-  
-// }
-
-
-function sevedata() {
   workExperienceForm.appendChild(newForme)
   
-//   inputsJobTitel.push(document.querySelector('.job-title'))
+  // inputsJobTitel.push(document.querySelector('.job-title'))
+  // console.log(inputsJobTitel);
   
-//   inputsCompany.push(document.querySelector('.company'))
-
-//   inputsYearsExperience.push(document.querySelector('.years-of-experience'))
-
-//   inputsDescription.push(document.querySelector('.description'))
-
-
-//   data.push(inputsJobTitel , inputsCompany , inputsCompany , inputsYearsExperience , inputsDescription)
   
-//   // console.log(data.flat(5));
- 
+  // inputsCompany.push(document.querySelector('.company'))
+
+  // inputsYearsExperience.push(document.querySelector('.years-of-experience'))
+
+  // inputsDescription.push(document.querySelector('.description'))
+
+
+  // data.push(inputsJobTitel , inputsCompany , inputsCompany , inputsYearsExperience , inputsDescription)
   
-//   const map1 = data.flat(5).map((x) => x.value);
-//   console.log(map1);
+  // // console.log(data.flat(5));
+  // console.log(data);
+  
+  // const map1 = data.flat(5).map((x) => x.value);
+  // console.log(map1);
+  
+  
+}
+
+
+function sevedata(){
+  let inputsJobTitel = Array.from(document.querySelectorAll('.job-title'))
+const ro = inputsJobTitel.map(x=>x.value)
+ console.log(ro);
+ let inputsCompany = Array.from(document.querySelectorAll('.company'))
+ const rot = inputsCompany.map(x=>x.value)
+ console.log(rot);
+  let ob ={}
+  for (let i = 0; i < inputsJobTitel.length; i++) {
+    data.push(
+      ob={
+        name :inputsJobTitel[i].value,
+        age :inputsCompany[i].value
+
+    })
+    
+  }
+  console.log(data);
+  
 }
 
 
