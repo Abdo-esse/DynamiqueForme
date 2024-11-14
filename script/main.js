@@ -22,7 +22,7 @@ let SaveData = document.querySelector("#saveData")
 //Data arry
 let data = []
 
-//Arry input Persone nam
+
 
 
 
@@ -31,13 +31,15 @@ let data = []
 
  //function de add person nam
  function addPerson() {
+
+   //Arry input Persone nam
    let namePersones =Array.from(document.querySelectorAll('.namePerson'))
+
+
     let newPerson = inputPersone.cloneNode(true)
-    
     parentInputPerson.appendChild(newPerson)
     newPerson.id =''
     newPerson.value =''
-    
     let datanemPerson = namePersones.map(x=>x.value)
     
    
@@ -46,9 +48,11 @@ let data = []
 
  // Function de add work Experience
  function addExperionce() {
+   
    let newExep = workExperience.cloneNode(true)
    parentInputExperience.appendChild(newExep)
    newExep.id=''
+
 }
 
 // Function de Aficher 
