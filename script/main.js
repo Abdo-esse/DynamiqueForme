@@ -86,12 +86,10 @@ console.log(parentWorkExperience);
 
 
 
-// 3eme tableus des inputs de  years job
-let inputsYearsExperience = Array.from(document.querySelectorAll('.years-of-experience'))
 
 
-// Dernier  tableus des inputs du description
-let inputsDescription = Array.from(document.querySelectorAll('.description'))
+
+
 
 
 //button de add work experience
@@ -141,20 +139,26 @@ function addWorkExperience() {
 function sevedata(){
   // 1re tableus des inputs de job-titel
   let inputsJobTitel = Array.from(document.querySelectorAll('.job-title'))
-const ro = inputsJobTitel.map(x=>x.value)
- console.log(ro);
+
+
  // 2eme  tableus des inputs de company
  let inputsCompany = Array.from(document.querySelectorAll('.company'))
- const rot = inputsCompany.map(x=>x.value)
- console.log(rot);
+ 
+
+ // 3eme tableus des inputs de  years job
+let inputsYearsExperience = Array.from(document.querySelectorAll('.years-of-experience'))
+
+// Dernier  tableus des inputs du description
+let inputsDescription = Array.from(document.querySelectorAll('.description'))
+
   let experience ={}
   for (let i = 0; i < inputsJobTitel.length; i++) {
     data.push(
       experience={
         title:inputsJobTitel[i].value,
         company :inputsCompany[i].value,
-        years:
-
+        years : inputsYearsExperience[i].value,
+        description : inputsDescription[i].value
     })
     
   }
