@@ -42,12 +42,12 @@ function sevedata() {
   let experience = {};
   for (let i = 0; i < inputsJobTitel.length; i++) {
     data.push(
-      (experience = {
+      experience = {
         title: inputsJobTitel[i].value,
         company: inputsCompany[i].value,
         years: inputsYearsExperience[i].value,
         description: inputsDescription[i].value,
-      })
+      }
     );
   }
   console.log(data);
@@ -58,8 +58,15 @@ function printData() {
   document.documentElement.innerHTML = ''
   for (let i = 0; i < data.length; i++) {
     document.documentElement.innerHTML += `
-    <div> ${data[i].title}</div>
-    `;
+   
+     <h1>Experience${i+1}</h1>
+    <div> titre de Experience : ${data[i].title} </div>
+    <div> company : ${data[i].company} </div>
+    <div> years of  Experience : ${data[i].years} </div>
+    <div> description sur  l'experience : ${data[i].description} </div>
+    
+
+    `
   }
 }
 
