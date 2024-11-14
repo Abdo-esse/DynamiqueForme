@@ -72,18 +72,17 @@ let workExperienceForm = document.querySelector('#form-work-experience')
 console.log(workExperienceForm);
 
 
-// Parent des inputs (form)
+// Parent des inputs 
 let parentWorkExperience = document.querySelector('.parent-input')
 console.log(parentWorkExperience);
 
-
 // 1re input de job-titel
-let inputsJobTitel = document.querySelector('.job-title')
-console.log(inputsJobTitel);
+let inputsJobTitel = Array.from(document.querySelectorAll('.job-title'))
+
 
 // 2eme input  de company
-let inputCompany = document.querySelector('.company')
-console.log(inputCompany);
+let inputsCompany = Array.from(document.querySelectorAll('.company'))
+console.log(inputsCompany);
 
 
 // 3eme input de job-titel
@@ -100,11 +99,13 @@ let addWorkExperienceBtn = document.querySelector('#add-work-experience')
 
 // La function de  add Work Experience
 function addWorkExperience() {
-  console.log('dfghjkl');
-  
- let newForme= parentWorkExperience.cloneNode(true)
+
+  let newForme= parentWorkExperience.cloneNode(true)
   workExperienceForm.appendChild(newForme)
-  
+  inputsJobTitel.push(document.querySelector('.job-title'))
+  console.log(inputsJobTitel);
+  inputsCompany.push(document.querySelector('.company'))
+  console.log(inputsCompany);
 }
 
 
