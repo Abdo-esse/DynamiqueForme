@@ -16,7 +16,7 @@ let data = [];
 // La function de  add Work Experience
 function addWorkExperience() {
   let newForme = parentWorkExperience.cloneNode(true);
-  let dataform = newForme.querySelectorAll("input");
+  let dataform = newForme.querySelectorAll(".input-value");
   dataform.forEach((e) => {
     e.value = "";
   });
